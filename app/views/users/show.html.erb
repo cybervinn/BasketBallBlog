@@ -1,0 +1,97 @@
+<div id = "column_container">
+
+<h2 class = "pageheader"> User Profile </h2>
+
+<div id = "profilecol1">
+
+  <h2>Profile: <%= @user.username %> </h2> <hr>
+
+  <table class = "profiletable"> 
+
+    <tr>
+      <td> UserID: </td>
+      <td> <%= current_user.id %> </td>
+    </tr>
+
+    <tr>
+      <td> Username: </td>
+      <td> <%= current_user.username %> </td>
+    </tr>
+
+    <tr>
+      <td> First Name: </td>
+      <td> <%= current_user.fname %> </td>
+    </tr>
+
+    <tr>
+      <td> Last Name: </td>
+      <td> <%= current_user.lname %> </td>
+    </tr>
+
+    <tr>
+      <td> Password: </td>
+      <td> <%= current_user.password %> </td>
+
+    <tr>
+      <td> Member Since: </td>
+      <td> <%= current_user.created_at %> </td>
+    </tr>
+
+    <tr>
+      <td> Last Updated: </td>
+      <td> <%= current_user.updated_at %> </td>
+    </tr>
+
+
+  </table> 
+
+  <ul>
+    <li> <%= link_to "Edit Profile", edit_user_path %> </li>
+    <li> <%= link_to "Delete Profile", '/delete_user', method: :delete %> </li>
+  </ul>
+
+</div> <!-- endo of profilecol1 div -->
+
+
+<div id = "profilecol2">
+
+
+  <% if Post.where(user_id: current_user.id).count > 0 %>
+
+  <h2> User: <%= current_user.username %>'s Posts: <%= Post.where(user_id: current_user.id).count %> </h2>
+
+    <% @posts.each do |post| %>
+
+    <table>
+
+    <tr>
+      <td> User: </td>
+      <td> <%= current_user.username  %> </td>
+    </tr>
+
+    <tr>
+      <td> Title: </td>
+      <td> <%= post.title %> </td>
+    </tr>
+
+    <tr>
+      <td> Post entry: </td>
+      <td> <%= post.body %> </td>
+    </tr>
+
+    <tr>
+      <td> Date created: </td>
+      <td> <%= post.created_at %> </td>
+    </tr> <hr>
+
+    </table>
+    <%end %>
+
+  <% else %>
+
+    <p> No posts has been made </p>
+
+  <% end %>
+
+  </div> <!-- end of profilecol1 div -->
+</div> <!-- end of column_container -->

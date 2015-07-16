@@ -1,0 +1,16 @@
+
+<div id= "login_box_wrapper">
+
+  <div id="login_title"> Login: </div> <br>
+
+  <%= form_tag '/sessions', :class => 'loginForm' do %>
+
+    <p><%= text_field_tag( :username, nil, placeholder: "Username", class: "username_form") %></p> <br>
+
+     <p><%= password_field_tag( :password, nil, placeholder: "Password", class: "password_form") %></p>
+     <%= submit_tag("Submit", class: "login_button") %>
+
+  <% end %>
+
+</div>
+

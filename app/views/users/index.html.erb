@@ -1,0 +1,42 @@
+<h2 class ="pageheader"> All Users</h2>
+
+<% @users.each do |user| %>
+
+<table class = "tableformat">
+
+  <tr>
+    <td> User ID: </td>
+    <td><%= user.id %></td>
+  </tr>
+
+  <tr>
+    <td> First Name: </td>
+    <td><%= user.fname %></td>
+  </tr>
+
+  <tr>
+    <td> Last Name: </td>
+    <td><%= user.lname %></td>
+  </tr>
+
+  <tr>
+    <td> Username: </td>
+    <td><%= link_to user.username, user_path(user) %>
+  <tr>
+    <td> Password: </td>
+    <td><%= user.password %></td>
+  </tr>
+
+  <tr>
+    <td> Member since: </td>
+    <td><%= user.created_at %></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td> User has made <%= Post.where(user_id: user.id).count %> posts</td>
+  </tr>
+
+</table>
+
+<% end %>

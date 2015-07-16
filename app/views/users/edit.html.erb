@@ -1,0 +1,25 @@
+<h2 class = "pageheader"> Edit User </h2>
+
+<div id = "edituserbox">
+<%= form_for @user do |f| %>
+
+<%= f.label "First Name:" %> <br>
+<%= f.text_field :fname, value: @user.fname %> <br><br>
+
+<%= f.label "Last Name:" %> <br>
+<%= f.text_field :lname, value: @user.lname %> <br><br>
+
+<%= f.label "Username:" %><br>
+<%= f.text_field :username, value: @user.username %> <br><br>
+
+<%= f.label "Password:" %><br>
+<%= f.password_field :password, value: @user.password %><br><br>
+
+<%= f.submit %>
+
+<% end %>
+
+</div>
+
+
+

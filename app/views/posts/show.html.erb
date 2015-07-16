@@ -1,0 +1,32 @@
+
+<h2 class = "pageheader"> Comment on a Post </h1>
+
+<div id= "commententrycontianer">
+  <div id= "postcontainer">
+    Post Title:
+    <%= @post.title %> <br>
+    Post Author: <%= User.find_by_id(@post.user_id).username %>
+    <hr>
+    <%= @post.body %>
+  </div>
+  <br>
+
+  <%= form_for Comment.new do |f|%>
+
+    <%= f.label( :comment, class: "comment_label")%> <br>
+    <%= f.text_area( :entry, size: "70x4", class: "comment_text") %>
+    <%= f.hidden_field :post_id, value: @post.id %> <br>
+    <%= f.submit( :Submit, class: "comment_submit") %>  
+
+  <% end %>
+
+  <h3 class = "colormeorange"> Previous comments: <%= Comment.where(post_id: @post.id).count %> </h3>
+  <% @post.comments.each do |comment| %>
+  <hr>
+  <p> <%= comment.entry %> </p>
+  <p>Posted by <%= User.find_by_id(comment.user_id).username %>
+   at <%= comment.created_at %></p>
+
+  <% end %>
+  </div>
+</dvi>

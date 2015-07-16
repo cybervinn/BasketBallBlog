@@ -1,0 +1,14 @@
+  <h2 class = "pageheader">Create a new post</h2>
+
+<div id = "newpostcontainer">
+
+  <%= form_for @post do |f| %>
+    <%= f.label :title  %><br>
+    <%= f.text_field( :title, class: "title_post", maxlength: 40) %> <br> <br>
+    <%= f.label( :body, class: "post_label") %> <br>
+    <%= f.text_area( :body, size: "80x10", class: "post_text") %> 
+    <br>
+  <%= f.submit("Submit", class: "submit_post") %>
+<% end %>
+
+</div>

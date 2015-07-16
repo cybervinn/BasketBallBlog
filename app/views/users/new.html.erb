@@ -1,0 +1,15 @@
+<div id = "sign_up_form">
+  <h2 class = "pageheader" > Sign Up Page </h2>
+  <%= form_for @user do |f| %>
+  
+  <p><%= f.text_field( :fname, placeholder: "First Name", class: "firstname_form") %> </p>
+  <p><%= f.text_field( :lname, placeholder: "Last Name", class: "lastname_form") %>  </p>
+  <p><%= f.text_field( :username, placeholder: "Username", class: "username_signup") %>  </p>
+  <p><%= f.password_field( :password, placeholder: "Password", class: "password_signup") %>  </p>
+  <p><%= password_field_tag( :password_confirmation, placeholder: "Password Confirmation", class: "passconfirm_form") %>
+  </p>
+    <%= f.submit("Submit", class: "submit_form") %>
+
+  <% end %>
+  
+</div>

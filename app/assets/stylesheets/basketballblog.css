@@ -1,0 +1,246 @@
+body {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: black;
+  font-family: sans-serif;
+  color: #dddddd;
+}
+
+header {
+  width: 100%;
+  height: 90px;
+}
+
+.colormeorange {
+  color: #FA8320;;
+}
+
+#pagecontainer {
+  width: 1200px;
+  padding: 10px 10px;
+  margin: 0 auto;
+  background-image: url('/images/basketball.jpg');
+  background-repeat: no-repeat;
+  background-size: 1400px;
+}
+
+#login_title {
+  font-size: 30px;
+  color: #FA8320;
+}
+
+#login_box_wrapper {
+  width:250px;
+  margin: 75px 0 300px 400px;
+  padding: 20px;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+#login_header {
+  color: #FA8320;
+  margin-left: 15px;
+}
+
+.loginForm p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#site_title {
+  width: 400px;
+  height: 80px;
+  float: left;
+  font-size: 18px;
+  display: inline-block;
+  color: #FA8320;
+}
+
+#site_title h1, h4{
+  margin-top: 0px;
+  margin-bottom: 0px; 
+}
+
+#title_description {
+  width: 260px;
+  height: 40px;
+  color: white;
+}
+
+nav {
+  padding: 0;
+  margin-right: 30px;
+  float: right;
+}
+
+#unordered_list_wrapper {
+  margin-left: 10px;
+}
+
+ul.navigation li {
+  padding: 0 20px;
+  list-style: none;
+  display: inline;
+}
+
+ul.navigation a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+a:hover {
+  color: #FA8320;
+}
+
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+.pageheader {
+  text-align: center;
+  color: #FA8320;
+}
+
+.username_form {
+  width: 240px;
+  height: 40px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.username_form[placeholder] {
+  font-size: 22px;
+  font-weight: lighter;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.password_form{
+  width: 240px;
+  height: 40px;  
+  margin: 0px;
+  padding: 0px;
+}
+
+.password_form[placeholder] {
+  font-size: 22px;
+  font-weight: lighter;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.login_button {
+  margin-top: 12px;
+  width: 244px;
+  height: 40px; 
+  border: .2px solid white;
+  border-radius: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  background-color: #FA8320;
+}
+
+#flashalert {
+  margin-right: 148px;
+  border-radius: 10px;
+  color: red;
+}
+
+#logintable {
+  width: 300px;
+  padding: 15px 20px;
+  margin: 0 auto;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+#sign_up_form {
+  width: 375px;
+  padding-bottom: 15px;
+  margin: 100px auto 300px auto;
+  border: 2px solid white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.feedstable {
+  width: 400px;
+  padding: 15px;
+  margin: 20px auto;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+
+.tableformat {
+  width: 450px;
+  padding: 15px;
+  margin: 0 auto 20px auto;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+#column_container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+
+#profilecol1 {
+  width: 300px;
+  padding: 10px 20px;
+  margin: 0 10px 70px 10px;
+  border: 1px solid white;
+  border-radius: 10px;
+  float:left;
+}
+
+#profilecol2 {
+  width: 300px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  float:left;
+}
+
+footer {
+  width: 650px;
+  height: 30px;
+  padding-top: 8px;
+  margin: 10px auto 50px auto;
+  border: 2px solid white;
+  border-radius: 10px;
+  text-align: center;
+  clear: both;
+}
+
+#newpostcontainer {
+  width: 500px;
+  padding:  30px;
+  margin: 0 auto 80px auto;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+#edituserbox {
+  width: 300px;
+  padding:  30px;
+  margin: 0 auto 80px auto;
+  border: 1px solid white;
+  border-radius: 10px; 
+}
+
+#postcontainer {
+  padding: 20px;
+  width: 400px;
+  height: 200px;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+}
+
+#commententrycontianer {
+  width: 450px;
+  padding: 20px;
+  margin: 0 auto 50px auto;
+  border: 1px solid white;
+  border-radius: 10px;
+
+}

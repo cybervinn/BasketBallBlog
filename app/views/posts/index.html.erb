@@ -1,0 +1,36 @@
+<h2 class = "pageheader"> Feeds Page, newest posts</h2>
+
+There are <%= Post.count %> posts
+
+<% @posts.each do |post| %>
+
+<table class = "feedstable">
+
+<tr>
+  <td> Title: </td>
+  <td> <%= link_to post.title, post_path(post.id) %> </td>
+</tr>
+
+<tr>
+  <td> Post entry: </td>
+  <td> <%= post.body %> </td>
+</tr>
+
+<tr>
+  <td> User: </td>
+  <td> <%= User.find_by_id(post.user_id).username %> </td>
+</tr>
+
+<tr>
+  <td> Date created: </td>
+  <td> <%= post.created_at %> </td>
+</tr>
+
+<tr>
+  <td></td>
+  <td> <%= link_to "#{Comment.where(post_id: post.id).count } Comments", post_path(post.id) %> </td>
+</tr>
+
+</table>
+
+<% end %>
